@@ -1,0 +1,18 @@
+EXECUTABLE = xc
+DYLIB = xc.dylib
+CC = cc
+CCFLAGS = -Wall -g -std=c++14 -I /usr/local/include
+LDFLAGS = -lstdc++ -lthr -lboost_system -L/usr/local/lib/boost
+SLFLAGS = -shared -fpic
+
+$(EXECUTABLE): main.o $(DYLIB)
+	$(CC) $(LDFLAGS) -o $(EXECUTABLE) main.o $(DYLIB)
+
+$(DYLIB): lib_test.o
+	$(CC) $(SLFLAGS) -o $(DYLIB) lib_test.cc
+
+%.o: %.cc makefile
+	$(CC) $(CCFLAGS) -c $<
+
+clean:
+	rm -f $(EXECUTABLE) $(DYLIB) *.o
