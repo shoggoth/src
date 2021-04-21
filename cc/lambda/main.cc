@@ -2,6 +2,12 @@
 
 int main() {
 
-	std::cout << "Hello" << std::endl;
+	[] { std::cout << "Hello"; }();
+
+
+	auto lambda = [] { std::cout << ", World!" << std::endl; };
+
+	lambda();
+
 	return 0;
 }
