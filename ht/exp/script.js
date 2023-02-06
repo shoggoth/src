@@ -18,7 +18,7 @@ function draw_canvas() {
 
 async function cgi_fetch() {
 
-  const url="http://dhole.lan:3002/cgi-bin/hello";
+  const url="http://dhole.lan:3002/cgi-bin/hello?hohol&p1=23&p2=vatnick";
 
   const response = await fetch(url);
 
