@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 static void print_args(int count, char **args);
 
@@ -6,7 +7,10 @@ int main(int argc, char **argv) {
   
   printf("Content-Type: text/html;charset=utf-8\n\n");
 
-  print_args(argc, argv);
+  // Doesn't actually work like this with CGI
+  // print_args(argc, argv);
+
+  printf("query: %s\n", getenv("QUERY_STRING"));
 
   return 0;
 }
