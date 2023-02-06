@@ -1,7 +1,7 @@
 EXECUTABLE = xc
 DYLIB = xc.dylib
 CXX = cc
-CXXFLAGS = -Wall -g -std=c++14 -I /usr/local/include -fPIC
+CXXFLAGS = -Wall -g -O0 -std=c++14 -I /usr/local/include -fPIC
 LDFLAGS = -lstdc++ -lthr -lboost_system -L/usr/local/lib/boost
 LDFLAGS = -lc++ -lboost_system -lboost_thread -L /usr/lib -L/usr/local/lib
 SLFLAGS = -shared 

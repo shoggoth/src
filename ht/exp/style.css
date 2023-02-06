@@ -1,0 +1,30 @@
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+
+p.blue {
+  color: blue;
+}
+
+p#blue {
+  color: red;
+}
+
+.box p {
+  color: green;
+}
+
+
+canvas {
+  border: 1px solid black;
+}
