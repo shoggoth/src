@@ -1,0 +1,2 @@
+cc main.c -o cgi-bin/hello
+killall mini_httpd && httpd -p 3002 -c "cgi-bin/*"
