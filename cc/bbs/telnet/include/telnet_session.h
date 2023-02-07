@@ -11,7 +11,7 @@ class TelnetSession {
 
     TelnetSession(ba::io_service& io_service);
 
-    tcp::socket& socket() { return socket; }
+    tcp::socket& socket() { return s; }
 
     void start();
 
@@ -22,7 +22,7 @@ private:
 
     void handle_write(const bs::error_code& error);
 
-    tcp::socket     socket;
+    tcp::socket     s;
     char            data[max_length];
 };
 
