@@ -1,5 +1,5 @@
-#ifndef __TELNET_SESSION_HPP__
-#define __TELNET_SESSION_HPP__
+#ifndef __TELNET_SESSION_H__
+#define __TELNET_SESSION_H__
 
 #include <boost/asio.hpp>
 
@@ -7,12 +7,11 @@ namespace ba = boost::asio;
 namespace bs = boost::system;
 using boost::asio::ip::tcp;
 
-class TelnetSession
-{
-public:
+class TelnetSession {
+
     TelnetSession(ba::io_service& io_service);
 
-    tcp::socket& socket() { return mSocket; }
+    tcp::socket& socket() { return socket; }
 
     void start();
 
@@ -23,8 +22,8 @@ private:
 
     void handle_write(const bs::error_code& error);
 
-    tcp::socket mSocket;
-    char data[max_length];
+    tcp::socket     socket;
+    char            data[max_length];
 };
 
 #endif

@@ -1,17 +1,16 @@
-#ifndef __TELNET_SERVER_HPP__
-#define __TELNET_SERVER_HPP__
+#ifndef __TELNET_SERVER_H__
+#define __TELNET_SERVER_H__
 
 #include "telnet_session.h"
+
 #include <stdint.h>
-#include <boost/asio.hpp>
 
 namespace ba = boost::asio;
 namespace bs = boost::system;
 using boost::asio::ip::tcp;
 
-class TelnetServer
-{
-public:
+class TelnetServer {
+
     TelnetServer(ba::io_service& io_service, uint16_t port);
 
 private:
