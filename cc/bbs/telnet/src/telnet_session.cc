@@ -8,14 +8,13 @@ namespace ba = boost::asio;
 namespace bs = boost::system;
 using boost::asio::ip::tcp;
 
-TelnetSession::TelnetSession(ba::io_service& io_service)
-    : mSocket(io_service)
+TelnetSession::TelnetSession(ba::io_service& io_service) : s(io_service)
 {
 }
 
 void TelnetSession::start()
 {
-    mSocket.async_read_some(boost::asio::buffer(data, max_length),
+    s.async_read_some(boost::asio::buffer(data, max_length),
         boost::bind(&TelnetSession::handle_read, this,
             ba::placeholders::error, ba::placeholders::bytes_transferred));
 }
@@ -25,7 +24,7 @@ void TelnetSession::handle_read(const bs::error_code& error, size_t bytes_transf
     if (!error)
     {
         std::cout << "TelnetSession::handle_read " << (int) bytes_transferred << " bytes\n";
-        ba::async_write(mSocket,
+        ba::async_write(s,
             ba::buffer(data, bytes_transferred), 
             boost::bind(&TelnetSession::handle_write, this, ba::placeholders::error));
     }
@@ -41,7 +40,7 @@ void TelnetSession::handle_write(const bs::error_code& error)
     if (!error)
     {
         std::cout << "TelnetSession::handle_write\n";
-        mSocket.async_read_some(ba::buffer(data, max_length),
+        s.async_read_some(ba::buffer(data, max_length),
             boost::bind(&TelnetSession::handle_read, this,
                 ba::placeholders::error, ba::placeholders::bytes_transferred));
     }
