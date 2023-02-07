@@ -7,7 +7,7 @@ namespace ba = boost::asio;
 namespace bs = boost::system;
 using boost::asio::ip::tcp;
 
-class TelnetSession {
+struct TelnetSession {
 
     TelnetSession(ba::io_service& io_service);
 

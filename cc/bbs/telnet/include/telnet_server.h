@@ -9,7 +9,7 @@ namespace ba = boost::asio;
 namespace bs = boost::system;
 using boost::asio::ip::tcp;
 
-class TelnetServer {
+struct TelnetServer {
 
     TelnetServer(ba::io_service& io_service, uint16_t port);
 
