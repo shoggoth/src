@@ -1,10 +1,10 @@
-#! /usr/local/bin/python
+#! /usr/bin/env python
 
 import socket
 
 server = "irc.rizon.net"
 channel = "#dogstar"
-botnick = "Mongoid"
+botnick = "djinn"
 
 ircsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 ircsock.connect((server, 6667))
