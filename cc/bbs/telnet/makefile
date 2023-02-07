@@ -3,7 +3,7 @@ SRC=src
 INC=include
 BLD=build
 CCFLAGS = -Wall -g -std=c++14 -I /usr/local/include -I $(INC)
-LDFLAGS = -lstdc++ -lboost_system -lboost_program_options -L/usr/local/lib
+LDFLAGS = -lstdc++ -lboost_system -lboost_program_options -lpthread -L/usr/local/lib
 EXECUTABLE = $(BLD)/ts
 
 $(EXECUTABLE): $(BLD)/main.o $(BLD)/telnet_session.o $(BLD)/telnet_server.o
