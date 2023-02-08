@@ -6,8 +6,8 @@ namespace po = boost::program_options;
 
 int main(int argc, char *argv[]) {
     
-    po::variables_map vm;
-    ba::io_service io_service;
+    po::variables_map   vm;
+    ba::io_service      io_service;
 
     try {
         po::options_description description;
@@ -25,9 +25,7 @@ int main(int argc, char *argv[]) {
             return 0;
         }
     }
-    catch (std::exception& e) {
-        std::cerr << "Error: " << e.what() << std::endl;
-    }
+    catch (std::exception& e) { std::cerr << "Error: " << e.what() << std::endl; }
 
     try {
         TelnetServer ts(io_service, vm["port"].as<uint16_t>());
@@ -35,9 +33,7 @@ int main(int argc, char *argv[]) {
         io_service.run();
         std::cout << "After io_service.run()\n";
     }
-    catch (std::exception& e) {
-        std::cerr << "TELNET SERVER ERROR: " << e.what() << std::endl;
-    }
+    catch (std::exception& e) { std::cerr << "TELNET SERVER ERROR: " << e.what() << std::endl; }
 
     return 0;
 }

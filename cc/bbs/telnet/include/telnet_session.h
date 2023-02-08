@@ -8,19 +8,20 @@ namespace bs = boost::system;
 using boost::asio::ip::tcp;
 
 struct TelnetSession {
-
+    
     TelnetSession(ba::io_service& io_service);
-
+    ~TelnetSession();
+    
     tcp::socket& socket() { return s; }
-
+    
     void start();
-
-    enum { max_length = 10 };
-
+    
+    enum { max_length = 255 };
+    
 private:
     void handle_read(const bs::error_code& error, size_t bytes_transferred);
     void handle_write(const bs::error_code& error);
-
+    
     tcp::socket     s;
     char            data[max_length];
 };
