@@ -19,7 +19,6 @@ struct TelnetSession {
 
 private:
     void handle_read(const bs::error_code& error, size_t bytes_transferred);
-
     void handle_write(const bs::error_code& error);
 
     tcp::socket     s;

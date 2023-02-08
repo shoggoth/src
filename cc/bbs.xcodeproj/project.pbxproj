@@ -40,7 +40,7 @@
 		FFAE36332993B0EC00BEFC69 /* telnet */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = telnet; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFAE363A2993B13100BEFC69 /* telnet_server.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = telnet_server.cc; path = telnet/src/telnet_server.cc; sourceTree = "<group>"; };
 		FFAE363B2993B13100BEFC69 /* telnet_session.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = telnet_session.cc; path = telnet/src/telnet_session.cc; sourceTree = "<group>"; };
-		FFAE363C2993B13100BEFC69 /* main.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cc; path = bbs/telnet/src/main.cc; sourceTree = SOURCE_ROOT; };
+		FFAE363C2993B13100BEFC69 /* main.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cc; path = src/main.cc; sourceTree = "<group>"; };
 		FFAE36402993B17C00BEFC69 /* telnet_session.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = telnet_session.h; path = telnet/include/telnet_session.h; sourceTree = "<group>"; };
 		FFAE36412993B17C00BEFC69 /* telnet_server.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = telnet_server.h; path = telnet/include/telnet_server.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,7 +97,8 @@
 			children = (
 				FFAE363C2993B13100BEFC69 /* main.cc */,
 			);
-			path = telnet;
+			name = telnet;
+			path = bbs/telnet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,7 +336,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5F9CYF5K3F;
 				ENABLE_HARDENED_RUNTIME = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				OTHER_LDFLAGS = "-lboost_program_options";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -347,7 +347,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5F9CYF5K3F;
 				ENABLE_HARDENED_RUNTIME = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				OTHER_LDFLAGS = "-lboost_program_options";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
