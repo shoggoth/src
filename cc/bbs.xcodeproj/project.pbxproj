@@ -335,7 +335,6 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5F9CYF5K3F;
-				ENABLE_HARDENED_RUNTIME = YES;
 				OTHER_LDFLAGS = "-lboost_program_options";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -346,7 +345,6 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5F9CYF5K3F;
-				ENABLE_HARDENED_RUNTIME = YES;
 				OTHER_LDFLAGS = "-lboost_program_options";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
