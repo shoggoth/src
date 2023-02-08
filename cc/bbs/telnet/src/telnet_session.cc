@@ -1,6 +1,8 @@
 #include "telnet_server.h"
 #include <iostream>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
+
+using namespace boost::placeholders;
 
 TelnetSession::TelnetSession(ba::io_service& io_service) : s(io_service) {}
 

@@ -1,6 +1,8 @@
 #include "telnet_server.h"
 #include <iostream>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
+
+using namespace boost::placeholders;
 
 TelnetServer::TelnetServer(ba::io_service& io_service, uint16_t port) : io_service(io_service), acceptor(io_service, tcp::endpoint(tcp::v4(), port)) {
     
