@@ -5,10 +5,13 @@
 //  Created by Richard Henry on 09/02/2023.
 //
 
-#include <iostream>
+#include "functor.h"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, Functor!\n";
+
+    std::cout << "Hello, Functor!" << std::endl;
+    
+    functors();
+    
     return 0;
 }

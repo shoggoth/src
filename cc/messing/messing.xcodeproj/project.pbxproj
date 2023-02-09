@@ -10,6 +10,9 @@
 		FF31F0252995140C006D602B /* lib_test.h in Headers */ = {isa = PBXBuildFile; fileRef = FF31F0232995140C006D602B /* lib_test.h */; };
 		FF31F0262995140C006D602B /* lib_test.c in Sources */ = {isa = PBXBuildFile; fileRef = FF31F0242995140C006D602B /* lib_test.c */; };
 		FF31F0282995152E006D602B /* libstatic_lib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF31F01E29951282006D602B /* libstatic_lib.a */; };
+		FF31F02B29952B3E006D602B /* functor.cc in Sources */ = {isa = PBXBuildFile; fileRef = FF31F02929952B3E006D602B /* functor.cc */; };
+		FF31F02E29953590006D602B /* structs.cc in Sources */ = {isa = PBXBuildFile; fileRef = FF31F02D29953590006D602B /* structs.cc */; };
+		FF31F0312995368A006D602B /* classes.cc in Sources */ = {isa = PBXBuildFile; fileRef = FF31F02F2995368A006D602B /* classes.cc */; };
 		FF3DAFFB29950359006AA21A /* main.cc in Sources */ = {isa = PBXBuildFile; fileRef = FF3DAFFA29950359006AA21A /* main.cc */; };
 		FF3DB00829950925006AA21A /* main.cc in Sources */ = {isa = PBXBuildFile; fileRef = FF3DB00729950925006AA21A /* main.cc */; };
 /* End PBXBuildFile section */
@@ -39,6 +42,12 @@
 		FF31F01E29951282006D602B /* libstatic_lib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libstatic_lib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF31F0232995140C006D602B /* lib_test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lib_test.h; sourceTree = "<group>"; };
 		FF31F0242995140C006D602B /* lib_test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lib_test.c; sourceTree = "<group>"; };
+		FF31F02929952B3E006D602B /* functor.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = functor.cc; sourceTree = "<group>"; };
+		FF31F02A29952B3E006D602B /* functor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = functor.h; sourceTree = "<group>"; };
+		FF31F02C29953590006D602B /* structs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = structs.h; sourceTree = "<group>"; };
+		FF31F02D29953590006D602B /* structs.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = structs.cc; sourceTree = "<group>"; };
+		FF31F02F2995368A006D602B /* classes.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = classes.cc; sourceTree = "<group>"; };
+		FF31F0302995368A006D602B /* classes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = classes.h; sourceTree = "<group>"; };
 		FF3DAFF729950359006AA21A /* messing */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = messing; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3DAFFA29950359006AA21A /* main.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cc; sourceTree = "<group>"; };
 		FF3DB00529950925006AA21A /* functor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = functor; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +121,10 @@
 			isa = PBXGroup;
 			children = (
 				FF3DAFFA29950359006AA21A /* main.cc */,
+				FF31F02F2995368A006D602B /* classes.cc */,
+				FF31F0302995368A006D602B /* classes.h */,
+				FF31F02D29953590006D602B /* structs.cc */,
+				FF31F02C29953590006D602B /* structs.h */,
 			);
 			path = messing;
 			sourceTree = "<group>";
@@ -120,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				FF3DB00729950925006AA21A /* main.cc */,
+				FF31F02929952B3E006D602B /* functor.cc */,
+				FF31F02A29952B3E006D602B /* functor.h */,
 			);
 			path = functor;
 			sourceTree = "<group>";
@@ -242,6 +257,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF31F0312995368A006D602B /* classes.cc in Sources */,
+				FF31F02E29953590006D602B /* structs.cc in Sources */,
 				FF3DAFFB29950359006AA21A /* main.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF3DB00829950925006AA21A /* main.cc in Sources */,
+				FF31F02B29952B3E006D602B /* functor.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
