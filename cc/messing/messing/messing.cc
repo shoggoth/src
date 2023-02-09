@@ -12,7 +12,6 @@
 #include "structs.h"
 #include "classes.h"
 
-
 int main(int argc, const char * argv[]) {
     
     const char *msg = std::getenv("HELLO_MSG");

@@ -42,11 +42,11 @@
 		FF31F0232995140C006D602B /* lib_test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lib_test.h; sourceTree = "<group>"; };
 		FF31F0242995140C006D602B /* lib_test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lib_test.c; sourceTree = "<group>"; };
 		FF31F02929952B3E006D602B /* functor.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = functor.cc; sourceTree = "<group>"; };
-		FF31F02A29952B3E006D602B /* functor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = functor.h; sourceTree = "<group>"; };
-		FF31F02C29953590006D602B /* structs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = structs.h; sourceTree = "<group>"; };
+		FF31F02A29952B3E006D602B /* functor.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = functor.h; sourceTree = "<group>"; };
+		FF31F02C29953590006D602B /* structs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = structs.h; sourceTree = "<group>"; };
 		FF31F02D29953590006D602B /* structs.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = structs.cc; sourceTree = "<group>"; };
 		FF31F02F2995368A006D602B /* classes.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = classes.cc; sourceTree = "<group>"; };
-		FF31F0302995368A006D602B /* classes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = classes.h; sourceTree = "<group>"; };
+		FF31F0302995368A006D602B /* classes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = classes.h; sourceTree = "<group>"; };
 		FF3DAFF729950359006AA21A /* messing */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = messing; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3DAFFA29950359006AA21A /* messing.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = messing.cc; sourceTree = "<group>"; };
 		FF3DB00529950925006AA21A /* functor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = functor; sourceTree = BUILT_PRODUCTS_DIR; };
