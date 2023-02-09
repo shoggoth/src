@@ -13,8 +13,7 @@
 		FF31F02B29952B3E006D602B /* functor.cc in Sources */ = {isa = PBXBuildFile; fileRef = FF31F02929952B3E006D602B /* functor.cc */; };
 		FF31F02E29953590006D602B /* structs.cc in Sources */ = {isa = PBXBuildFile; fileRef = FF31F02D29953590006D602B /* structs.cc */; };
 		FF31F0312995368A006D602B /* classes.cc in Sources */ = {isa = PBXBuildFile; fileRef = FF31F02F2995368A006D602B /* classes.cc */; };
-		FF3DAFFB29950359006AA21A /* main.cc in Sources */ = {isa = PBXBuildFile; fileRef = FF3DAFFA29950359006AA21A /* main.cc */; };
-		FF3DB00829950925006AA21A /* main.cc in Sources */ = {isa = PBXBuildFile; fileRef = FF3DB00729950925006AA21A /* main.cc */; };
+		FF3DAFFB29950359006AA21A /* messing.cc in Sources */ = {isa = PBXBuildFile; fileRef = FF3DAFFA29950359006AA21A /* messing.cc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,9 +48,8 @@
 		FF31F02F2995368A006D602B /* classes.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = classes.cc; sourceTree = "<group>"; };
 		FF31F0302995368A006D602B /* classes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = classes.h; sourceTree = "<group>"; };
 		FF3DAFF729950359006AA21A /* messing */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = messing; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF3DAFFA29950359006AA21A /* main.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cc; sourceTree = "<group>"; };
+		FF3DAFFA29950359006AA21A /* messing.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = messing.cc; sourceTree = "<group>"; };
 		FF3DB00529950925006AA21A /* functor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = functor; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF3DB00729950925006AA21A /* main.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +118,7 @@
 		FF3DAFF929950359006AA21A /* messing */ = {
 			isa = PBXGroup;
 			children = (
-				FF3DAFFA29950359006AA21A /* main.cc */,
+				FF3DAFFA29950359006AA21A /* messing.cc */,
 				FF31F02F2995368A006D602B /* classes.cc */,
 				FF31F0302995368A006D602B /* classes.h */,
 				FF31F02D29953590006D602B /* structs.cc */,
@@ -132,7 +130,6 @@
 		FF3DB00629950925006AA21A /* functor */ = {
 			isa = PBXGroup;
 			children = (
-				FF3DB00729950925006AA21A /* main.cc */,
 				FF31F02929952B3E006D602B /* functor.cc */,
 				FF31F02A29952B3E006D602B /* functor.h */,
 			);
@@ -259,7 +256,7 @@
 			files = (
 				FF31F0312995368A006D602B /* classes.cc in Sources */,
 				FF31F02E29953590006D602B /* structs.cc in Sources */,
-				FF3DAFFB29950359006AA21A /* main.cc in Sources */,
+				FF3DAFFB29950359006AA21A /* messing.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +264,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF3DB00829950925006AA21A /* main.cc in Sources */,
 				FF31F02B29952B3E006D602B /* functor.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

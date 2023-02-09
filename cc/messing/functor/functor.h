@@ -11,6 +11,6 @@
 #include <iostream>
 #warning Lad, you are a gay
 
-extern void functors();
+void functors();
 
 #endif /* functor_h */
