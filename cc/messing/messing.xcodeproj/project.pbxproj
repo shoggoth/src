@@ -8,10 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		FF3DAFFB29950359006AA21A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF3DAFFA29950359006AA21A /* main.cpp */; };
+		FF3DB00829950925006AA21A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF3DB00729950925006AA21A /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		FF3DAFF529950359006AA21A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		FF3DB00329950925006AA21A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -25,10 +35,19 @@
 /* Begin PBXFileReference section */
 		FF3DAFF729950359006AA21A /* messing */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = messing; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3DAFFA29950359006AA21A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		FF3DB00529950925006AA21A /* functor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = functor; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF3DB00729950925006AA21A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FF3DAFF429950359006AA21A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF3DB00229950925006AA21A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				FF3DAFF929950359006AA21A /* messing */,
+				FF3DB00629950925006AA21A /* functor */,
 				FF3DAFF829950359006AA21A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				FF3DAFF729950359006AA21A /* messing */,
+				FF3DB00529950925006AA21A /* functor */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +81,14 @@
 				FF3DAFFA29950359006AA21A /* main.cpp */,
 			);
 			path = messing;
+			sourceTree = "<group>";
+		};
+		FF3DB00629950925006AA21A /* functor */ = {
+			isa = PBXGroup;
+			children = (
+				FF3DB00729950925006AA21A /* main.cpp */,
+			);
+			path = functor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +111,23 @@
 			productReference = FF3DAFF729950359006AA21A /* messing */;
 			productType = "com.apple.product-type.tool";
 		};
+		FF3DB00429950925006AA21A /* functor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF3DB00929950925006AA21A /* Build configuration list for PBXNativeTarget "functor" */;
+			buildPhases = (
+				FF3DB00129950925006AA21A /* Sources */,
+				FF3DB00229950925006AA21A /* Frameworks */,
+				FF3DB00329950925006AA21A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = functor;
+			productName = functor;
+			productReference = FF3DB00529950925006AA21A /* functor */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +138,9 @@
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					FF3DAFF629950359006AA21A = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					FF3DB00429950925006AA21A = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
@@ -110,6 +159,7 @@
 			projectRoot = "";
 			targets = (
 				FF3DAFF629950359006AA21A /* messing */,
+				FF3DB00429950925006AA21A /* functor */,
 			);
 		};
 /* End PBXProject section */
@@ -120,6 +170,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF3DAFFB29950359006AA21A /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF3DB00129950925006AA21A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF3DB00829950925006AA21A /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +313,22 @@
 			};
 			name = Release;
 		};
+		FF3DB00A29950925006AA21A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FF3DB00B29950925006AA21A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -272,6 +346,15 @@
 			buildConfigurations = (
 				FF3DAFFF29950359006AA21A /* Debug */,
 				FF3DB00029950359006AA21A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF3DB00929950925006AA21A /* Build configuration list for PBXNativeTarget "functor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF3DB00A29950925006AA21A /* Debug */,
+				FF3DB00B29950925006AA21A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

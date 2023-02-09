@@ -9,7 +9,8 @@
 #include <boost/json.hpp>
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    
+    const char *msg = std::getenv("HELLO_MSG");
+    std::cout << "Hello, " << (msg ? msg : "World!") << std::endl;
     return 0;
 }
