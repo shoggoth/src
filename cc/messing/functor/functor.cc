@@ -28,6 +28,12 @@ void functors() {
 
 static int increment(int x) {  return (x + 1); }
 
+// Functors, unlike regular functions, can contain state.
+// You often pass functors as arguments to other functions such as std::transform or the other standard library algorithms.
+// They are also potentially more efficient.
+//
+// You can use boost::function, to create functors from functions and methods
+
 class incrementer {
 
     int inc;
