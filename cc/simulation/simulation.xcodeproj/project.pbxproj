@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FFB585DD299A79940089A817 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FFB585DC299A79940089A817 /* main.cpp */; };
 		FFB585ED299A7A290089A817 /* vector.h in Headers */ = {isa = PBXBuildFile; fileRef = FFB585EC299A7A290089A817 /* vector.h */; };
 		FFB585F8299A7B680089A817 /* plane.c in Sources */ = {isa = PBXBuildFile; fileRef = FFB585EE299A7B680089A817 /* plane.c */; };
 		FFB585F9299A7B680089A817 /* body.c in Sources */ = {isa = PBXBuildFile; fileRef = FFB585EF299A7B680089A817 /* body.c */; };
@@ -19,7 +18,23 @@
 		FFB585FF299A7B680089A817 /* space.h in Headers */ = {isa = PBXBuildFile; fileRef = FFB585F5299A7B680089A817 /* space.h */; };
 		FFB58600299A7B680089A817 /* spring.c in Sources */ = {isa = PBXBuildFile; fileRef = FFB585F6299A7B680089A817 /* spring.c */; };
 		FFB58601299A7B680089A817 /* spring.h in Headers */ = {isa = PBXBuildFile; fileRef = FFB585F7299A7B680089A817 /* spring.h */; };
+		FFB58605299A9B1D0089A817 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = FFB58604299A9B1D0089A817 /* main.c */; };
+		FFB58608299A9E720089A817 /* body.c in Sources */ = {isa = PBXBuildFile; fileRef = FFB585EF299A7B680089A817 /* body.c */; };
+		FFB58609299A9E720089A817 /* mass.c in Sources */ = {isa = PBXBuildFile; fileRef = FFB585F1299A7B680089A817 /* mass.c */; };
+		FFB5860A299A9E720089A817 /* plane.c in Sources */ = {isa = PBXBuildFile; fileRef = FFB585EE299A7B680089A817 /* plane.c */; };
+		FFB5860B299A9E720089A817 /* space.c in Sources */ = {isa = PBXBuildFile; fileRef = FFB585F4299A7B680089A817 /* space.c */; };
+		FFB5860C299A9E720089A817 /* spring.c in Sources */ = {isa = PBXBuildFile; fileRef = FFB585F6299A7B680089A817 /* spring.c */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FFB58606299A9C410089A817 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FFB585D1299A79940089A817 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFB585E6299A79C40089A817;
+			remoteInfo = spring_mass;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		FFB585D7299A79940089A817 /* CopyFiles */ = {
@@ -48,6 +63,7 @@
 		FFB585F5299A7B680089A817 /* space.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = space.h; sourceTree = "<group>"; };
 		FFB585F6299A7B680089A817 /* spring.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = spring.c; sourceTree = "<group>"; };
 		FFB585F7299A7B680089A817 /* spring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = spring.h; sourceTree = "<group>"; };
+		FFB58604299A9B1D0089A817 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +90,7 @@
 				FFB585DB299A79940089A817 /* simulation */,
 				FFB585EB299A79E70089A817 /* spring_mass */,
 				FFB585DA299A79940089A817 /* Products */,
+				FFB58602299A89770089A817 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				FFB585DC299A79940089A817 /* main.cpp */,
+				FFB58604299A9B1D0089A817 /* main.c */,
 			);
 			path = simulation;
 			sourceTree = "<group>";
@@ -110,6 +128,13 @@
 				FFB585F7299A7B680089A817 /* spring.h */,
 			);
 			path = spring_mass;
+			sourceTree = "<group>";
+		};
+		FFB58602299A89770089A817 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +167,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FFB58607299A9C410089A817 /* PBXTargetDependency */,
 			);
 			name = simulation;
 			productName = simulation;
@@ -206,7 +232,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFB585DD299A79940089A817 /* main.cpp in Sources */,
+				FFB58608299A9E720089A817 /* body.c in Sources */,
+				FFB58609299A9E720089A817 /* mass.c in Sources */,
+				FFB5860A299A9E720089A817 /* plane.c in Sources */,
+				FFB5860B299A9E720089A817 /* space.c in Sources */,
+				FFB5860C299A9E720089A817 /* spring.c in Sources */,
+				FFB58605299A9B1D0089A817 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +255,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		FFB58607299A9C410089A817 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFB585E6299A79C40089A817 /* spring_mass */;
+			targetProxy = FFB58606299A9C410089A817 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		FFB585DE299A79940089A817 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -231,9 +270,9 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -260,8 +299,8 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				ENABLE_TESTABILITY = NO;
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -289,9 +328,9 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -319,7 +358,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;

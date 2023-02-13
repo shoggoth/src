@@ -13,7 +13,6 @@
 #include "spring.h"
 #include "plane.h"
 
-
 typedef int(*DSSMMassCollisionCallback)(sm_mass *, sm_mass *);
 
 typedef struct {
