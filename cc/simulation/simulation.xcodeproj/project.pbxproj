@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF13CE88299BC41000354308 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF13CE87299BC41000354308 /* main.cpp */; };
+		FF13CE8C299BC43600354308 /* libspring_mass.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF69FB91299B941100D18B2E /* libspring_mass.a */; };
 		FF69FBA4299B953F00D18B2E /* mass.h in Headers */ = {isa = PBXBuildFile; fileRef = FF69FB99299B953F00D18B2E /* mass.h */; };
 		FF69FBA5299B953F00D18B2E /* space.h in Headers */ = {isa = PBXBuildFile; fileRef = FF69FB9A299B953F00D18B2E /* space.h */; };
 		FF69FBA6299B953F00D18B2E /* body.h in Headers */ = {isa = PBXBuildFile; fileRef = FF69FB9B299B953F00D18B2E /* body.h */; };
@@ -24,6 +26,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		FF13CE83299BC41000354308 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		FF69FBB1299B975300D18B2E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -36,6 +47,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FF13CE85299BC41000354308 /* cpp_sim */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cpp_sim; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF13CE87299BC41000354308 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FF69FB91299B941100D18B2E /* libspring_mass.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libspring_mass.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF69FB99299B953F00D18B2E /* mass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mass.h; sourceTree = "<group>"; };
 		FF69FB9A299B953F00D18B2E /* space.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = space.h; sourceTree = "<group>"; };
@@ -54,6 +67,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FF13CE82299BC41000354308 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF13CE8C299BC43600354308 /* libspring_mass.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FF69FB8F299B941100D18B2E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -72,10 +93,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF13CE86299BC41000354308 /* cpp_sim */ = {
+			isa = PBXGroup;
+			children = (
+				FF13CE87299BC41000354308 /* main.cpp */,
+			);
+			path = cpp_sim;
+			sourceTree = "<group>";
+		};
 		FF69FB88299B941100D18B2E = {
 			isa = PBXGroup;
 			children = (
 				FF69FBB4299B975300D18B2E /* c_sim */,
+				FF13CE86299BC41000354308 /* cpp_sim */,
 				FF69FB98299B953F00D18B2E /* spring_mass */,
 				FF69FB92299B941100D18B2E /* Products */,
 				FF69FBBA299B981A00D18B2E /* Frameworks */,
@@ -87,6 +117,7 @@
 			children = (
 				FF69FB91299B941100D18B2E /* libspring_mass.a */,
 				FF69FBB3299B975300D18B2E /* c_sim */,
+				FF13CE85299BC41000354308 /* cpp_sim */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,6 +175,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		FF13CE84299BC41000354308 /* cpp_sim */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF13CE8B299BC41000354308 /* Build configuration list for PBXNativeTarget "cpp_sim" */;
+			buildPhases = (
+				FF13CE81299BC41000354308 /* Sources */,
+				FF13CE82299BC41000354308 /* Frameworks */,
+				FF13CE83299BC41000354308 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cpp_sim;
+			productName = cpp_sim;
+			productReference = FF13CE85299BC41000354308 /* cpp_sim */;
+			productType = "com.apple.product-type.tool";
+		};
 		FF69FB90299B941100D18B2E /* spring_mass */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF69FB95299B941100D18B2E /* Build configuration list for PBXNativeTarget "spring_mass" */;
@@ -187,6 +235,9 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					FF13CE84299BC41000354308 = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					FF69FB90299B941100D18B2E = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -209,12 +260,21 @@
 			projectRoot = "";
 			targets = (
 				FF69FBB2299B975300D18B2E /* c_sim */,
+				FF13CE84299BC41000354308 /* cpp_sim */,
 				FF69FB90299B941100D18B2E /* spring_mass */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FF13CE81299BC41000354308 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF13CE88299BC41000354308 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FF69FB8E299B941100D18B2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -239,6 +299,30 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		FF13CE89299BC41000354308 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5F9CYF5K3F;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FF13CE8A299BC41000354308 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5F9CYF5K3F;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		FF69FB93299B941100D18B2E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -397,6 +481,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FF13CE8B299BC41000354308 /* Build configuration list for PBXNativeTarget "cpp_sim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF13CE89299BC41000354308 /* Debug */,
+				FF13CE8A299BC41000354308 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FF69FB8C299B941100D18B2E /* Build configuration list for PBXProject "simulation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
