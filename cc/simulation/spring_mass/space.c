@@ -150,7 +150,7 @@ static void dsmsResolveObjectToPlaneCollisions(sm_space *space) {
 
 sm_space *dsmsSpaceNew(const unsigned max_masses, const unsigned max_springs, const unsigned max_planes) {
 
-    sm_space *space = malloc(sizeof(space));
+    sm_space *space = malloc(sizeof(sm_space));
     assert(space);
 
     space->friction = 0.04;

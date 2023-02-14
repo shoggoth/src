@@ -13,7 +13,7 @@
 #include "spring.h"
 #include "plane.h"
 
-typedef int(*DSSMMassCollisionCallback)(sm_mass *, sm_mass *);
+typedef int(*collide_func)(sm_mass *, sm_mass *);
 
 typedef struct {
     
@@ -29,7 +29,7 @@ typedef struct {
     sm_spring           **springs, **springs_end;
     sm_plane            **planes, **planes_end;
     
-    DSSMMassCollisionCallback   mass_collision_callback;
+    collide_func        mass_collision_callback;
     
 } sm_space;
 
