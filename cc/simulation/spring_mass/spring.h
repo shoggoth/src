@@ -20,4 +20,6 @@ typedef struct {
     
 } sm_spring;
 
+sm_spring *new_spring(sm_mass * const m1, sm_mass * const m2, const float k, const float l, const float f);
+
 #endif

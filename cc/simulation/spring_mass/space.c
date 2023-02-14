@@ -10,9 +10,236 @@
 #include <stdlib.h>
 #include <assert.h>
 
-static inline float vec2LengthSquared(const vec2 v) { return vec2DotProduct(v, v); }
+static void calculate_spring_forces(sm_space *space);
+static void resolve_object_to_object_collisions(sm_space *space);
+static void resolve_object_to_plane_collisions(sm_space *space);
 
-static void dsmsCalculateSpringForces(sm_space *space) {
+#pragma mark Space management
+
+sm_space *new_space(const unsigned max_masses, const unsigned max_springs, const unsigned max_planes) {
+
+    sm_space *space = malloc(sizeof(sm_space));
+    assert(space);
+
+    space->friction = 0.04;
+    space->v_factor = 0.02;
+    space->a_factor = 0.0004;
+    space->separation_force = 1.0;
+
+    space->masses = calloc(max_masses, sizeof(sm_mass *));
+    space->springs = calloc(max_springs, sizeof(sm_spring *));
+    space->planes = calloc(max_planes, sizeof(sm_plane *));
+    assert(space->masses && space->springs && space->planes);
+
+    space->masses_end = &space->masses[max_masses];
+    space->springs_end = &space->springs[max_springs];
+    space->planes_end = &space->planes[max_planes];
+
+    space->number_of_masses = 0;
+    space->number_of_springs = 0;
+    space->number_of_planes = 0;
+
+    space->mass_collision_callback = 0;
+
+    return space;
+}
+
+void free_space(sm_space * const space) {
+
+    free(space->masses);
+    free(space->springs);
+    free(space->planes);
+
+    free(space);
+}
+
+#pragma mark Simulation step
+
+void step_space(sm_space * const space) {
+    
+    calculate_spring_forces(space);
+    
+    resolve_object_to_object_collisions(space);
+    
+    // Calculate mass effect
+    for (sm_mass **p = space->masses; p < space->masses_end; p++) {
+        
+        sm_mass *mass = *p;
+        
+        if (mass) {
+            
+            assert(mass->mass > 0.0);
+            
+            float massTimesFriction = mass->mass * space->friction;
+            
+            // a' = f / m
+            mass->acc = vec2Multiply(vec2Subtract(mass->frc, vec2Multiply(mass->vel, massTimesFriction)), 1.0 / mass->mass);
+            // s' = ut + 0.5at^2
+            mass->pos = vec2Add(mass->pos, vec2Add(vec2Multiply(mass->vel, space->v_factor), vec2Multiply(mass->acc, space->a_factor)));
+            // v' = v + a
+            mass->vel = vec2Add(mass->vel, mass->acc);
+            
+        } else break;
+    }
+    
+    resolve_object_to_plane_collisions(space);
+}
+
+#pragma mark Mass management
+
+void add_mass_to_space(sm_space *space, sm_mass *mass) {
+    
+    for (sm_mass **p = space->masses; p < space->masses_end; p++) {
+        
+        assert(*p != mass);
+        
+        if (!*p) {
+            
+            *p = mass;
+            space->number_of_masses++;
+            
+            // Initialise the mass' contents
+            mass->pos = (vec2) { 0, 0 };
+            mass->vel = (vec2) { 0, 0 };
+            mass->acc = (vec2) { 0, 0 };
+            mass->frc = (vec2) { 0, 0 };
+            
+            mass->e = 1.0;
+            mass->mass = 1.0;
+            mass->radius = 0.5;
+            
+            mass->collision_mask = 0;
+            mass->collision_type = 0;
+            
+            mass->user_data = 0;
+            
+            break;
+        }
+    }
+}
+
+void remove_mass_from_space(sm_space *space, sm_mass *mass) {
+    
+    int mass_found = 0;
+    
+    for (sm_mass **p = space->masses; p < space->masses_end; p++) {
+        
+        if (*p == mass) {
+            
+            // Remove the mass if we find it
+            assert(!mass_found && space->number_of_masses > 0);
+            
+            *p = 0;
+            space->number_of_masses--;
+            mass_found = 1;
+            
+        } else if (mass_found) {
+            
+            // Compact the array
+            *(p - 1) = *p;
+            *p = 0;
+        }
+    }
+    
+    assert(mass_found);
+}
+
+#pragma mark Spring management
+
+void add_spring_to_space(sm_space *space, sm_spring *spring) {
+    
+    for (sm_spring **p = space->springs; p < space->springs_end; p++) {
+        
+        assert(*p != spring);
+        
+        if (!*p) {
+            
+            *p = spring;
+            space->number_of_springs++;
+            
+            spring->k = 1.0;
+            spring->l = 1.0;
+            spring->f = 0.0;
+            spring->mass1 = 0;
+            spring->mass2 = 0;
+            
+            break;
+        }
+    }
+}
+
+void remove_spring_from_space(sm_space *space, sm_spring *spring) {
+    
+    int spring_found = 0;
+    
+    for (sm_spring **s = space->springs; s < space->springs_end; s++) {
+        
+        if (*s == spring) {
+            
+            // Remove the spring if we find it
+            assert(!spring_found && space->number_of_springs > 0);
+            
+            *s = 0;
+            space->number_of_springs--;
+            spring_found = 1;
+            
+        } else if (spring_found) {
+            
+            // Compact the array
+            *(s - 1) = *s;
+            *s = 0;
+        }
+    }
+    
+    assert(spring_found);
+}
+
+#pragma mark Plane management
+
+void add_plane_to_space(sm_space *space, sm_plane *plane) {
+    
+    for (sm_plane **p = space->planes; p < space->planes_end; p++) {
+        
+        assert(*p != plane);
+        
+        if (!*p) {
+            
+            *p = plane;
+            space->number_of_planes++;
+            break;
+        }
+    }
+}
+
+void remove_plane_from_space(sm_space *space, sm_plane *plane) {
+    
+    int plane_found = 0;
+    
+    for (sm_plane **p = space->planes; p < space->planes_end; p++) {
+        
+        if (*p == plane) {
+            
+            // Remove the plane if we find it
+            assert(!plane_found);
+            
+            *p = 0;
+            space->number_of_planes--;
+            plane_found = 1;
+            
+        } else if (plane_found) {
+            
+            // Compact the array
+            *(p - 1) = *p;
+            *p = 0;
+        }
+    }
+    
+    assert(plane_found);
+}
+
+#pragma mark Calculations
+
+static void calculate_spring_forces(sm_space *space) {
 
     // Calculate spring forces
     for (unsigned i = 0; i < space->number_of_springs; i++) {
@@ -55,7 +282,9 @@ static int collision_sort_x_space_compare(const void *e1, const void *e2) {
     return (m1min > m2min) ? 1 : -1;
 }
 
-static void dsmsResolveObjectToObjectCollisions(sm_space *space) {
+static inline float vec2LengthSquared(const vec2 v) { return vec2DotProduct(v, v); }
+
+static void resolve_object_to_object_collisions(sm_space *space) {
 
     // Partition in x space
     qsort(space->masses, space->number_of_masses, sizeof(sm_mass *), collision_sort_x_space_compare);
@@ -117,7 +346,7 @@ static void dsmsResolveObjectToObjectCollisions(sm_space *space) {
     }
 }
 
-static void dsmsResolveObjectToPlaneCollisions(sm_space *space) {
+static void resolve_object_to_plane_collisions(sm_space *space) {
 
     // Detect and resolve object - plane collisions
     for (unsigned i = 0; i < space->number_of_masses; i++) {
@@ -143,225 +372,3 @@ static void dsmsResolveObjectToPlaneCollisions(sm_space *space) {
     }
 }
 
-#pragma mark Space management
-
-sm_space *dsmsSpaceNew(const unsigned max_masses, const unsigned max_springs, const unsigned max_planes) {
-
-    sm_space *space = malloc(sizeof(sm_space));
-    assert(space);
-
-    space->friction = 0.04;
-    space->v_factor = 0.02;
-    space->a_factor = 0.0004;
-    space->separation_force = 1.0;
-
-    space->masses = calloc(max_masses, sizeof(sm_mass *));
-    space->springs = calloc(max_springs, sizeof(sm_spring *));
-    space->planes = calloc(max_planes, sizeof(sm_plane *));
-    assert(space->masses && space->springs && space->planes);
-
-    space->masses_end = &space->masses[max_masses];
-    space->springs_end = &space->springs[max_springs];
-    space->planes_end = &space->planes[max_planes];
-
-    space->number_of_masses = 0;
-    space->number_of_springs = 0;
-    space->number_of_planes = 0;
-
-    space->mass_collision_callback = 0;
-
-    return space;
-}
-
-void dsmsSpaceFree(sm_space * const space) {
-
-    free(space->masses);
-    free(space->springs);
-    free(space->planes);
-
-    free(space);
-}
-
-#pragma mark Simulation step
-
-void dsmsSpaceStep(sm_space * const space) {
-    
-    dsmsCalculateSpringForces(space);
-    
-    dsmsResolveObjectToObjectCollisions(space);
-    
-    // Calculate mass effect
-    for (sm_mass **p = space->masses; p < space->masses_end; p++) {
-        
-        sm_mass *mass = *p;
-        
-        if (mass) {
-            
-            assert(mass->mass > 0.0);
-            
-            float massTimesFriction = mass->mass * space->friction;
-            
-            // a' = f / m
-            mass->acc = vec2Multiply(vec2Subtract(mass->frc, vec2Multiply(mass->vel, massTimesFriction)), 1.0 / mass->mass);
-            // s' = ut + 0.5at^2
-            mass->pos = vec2Add(mass->pos, vec2Add(vec2Multiply(mass->vel, space->v_factor), vec2Multiply(mass->acc, space->a_factor)));
-            // v' = v + a
-            mass->vel = vec2Add(mass->vel, mass->acc);
-            
-        } else break;
-    }
-    
-    dsmsResolveObjectToPlaneCollisions(space);
-}
-
-#pragma mark Mass management
-
-void dsmsSpaceAddMass(sm_space *space, sm_mass *mass) {
-    
-    for (sm_mass **p = space->masses; p < space->masses_end; p++) {
-        
-        assert(*p != mass);
-        
-        if (!*p) {
-            
-            *p = mass;
-            space->number_of_masses++;
-            
-            // Initialise the mass' contents
-            mass->pos = (vec2) { 0, 0 };
-            mass->vel = (vec2) { 0, 0 };
-            mass->acc = (vec2) { 0, 0 };
-            mass->frc = (vec2) { 0, 0 };
-            
-            mass->e = 1.0;
-            mass->mass = 1.0;
-            mass->radius = 0.5;
-            
-            mass->collision_mask = 0;
-            mass->collision_type = 0;
-            
-            mass->user_data = 0;
-            
-            break;
-        }
-    }
-}
-
-void dsmsSpaceRemMass(sm_space *space, sm_mass *mass) {
-    
-    int mass_found = 0;
-    
-    for (sm_mass **p = space->masses; p < space->masses_end; p++) {
-        
-        if (*p == mass) {
-            
-            // Remove the mass if we find it
-            assert(!mass_found && space->number_of_masses > 0);
-            
-            *p = 0;
-            space->number_of_masses--;
-            mass_found = 1;
-            
-        } else if (mass_found) {
-            
-            // Compact the array
-            *(p - 1) = *p;
-            *p = 0;
-        }
-    }
-    
-    assert(mass_found);
-}
-
-#pragma mark Spring management
-
-void dsmsSpaceAddSpring(sm_space *space, sm_spring *spring) {
-    
-    for (sm_spring **p = space->springs; p < space->springs_end; p++) {
-        
-        assert(*p != spring);
-        
-        if (!*p) {
-            
-            *p = spring;
-            space->number_of_springs++;
-            
-            spring->k = 1.0;
-            spring->l = 1.0;
-            spring->f = 0.0;
-            spring->mass1 = 0;
-            spring->mass2 = 0;
-            
-            break;
-        }
-    }
-}
-
-void dsmsSpaceRemSpring(sm_space *space, sm_spring *spring) {
-    
-    int spring_found = 0;
-    
-    for (sm_spring **s = space->springs; s < space->springs_end; s++) {
-        
-        if (*s == spring) {
-            
-            // Remove the spring if we find it
-            assert(!spring_found && space->number_of_springs > 0);
-            
-            *s = 0;
-            space->number_of_springs--;
-            spring_found = 1;
-            
-        } else if (spring_found) {
-            
-            // Compact the array
-            *(s - 1) = *s;
-            *s = 0;
-        }
-    }
-    
-    assert(spring_found);
-}
-
-#pragma mark Plane management
-
-void dsmsSpaceAddPlane(sm_space *space, sm_plane *plane) {
-    
-    for (sm_plane **p = space->planes; p < space->planes_end; p++) {
-        
-        assert(*p != plane);
-        
-        if (!*p) {
-            
-            *p = plane;
-            space->number_of_planes++;
-            break;
-        }
-    }
-}
-
-void dsmsSpaceRemPlane(sm_space *space, sm_plane *plane) {
-    
-    int plane_found = 0;
-    
-    for (sm_plane **p = space->planes; p < space->planes_end; p++) {
-        
-        if (*p == plane) {
-            
-            // Remove the plane if we find it
-            assert(!plane_found);
-            
-            *p = 0;
-            space->number_of_planes--;
-            plane_found = 1;
-            
-        } else if (plane_found) {
-            
-            // Compact the array
-            *(p - 1) = *p;
-            *p = 0;
-        }
-    }
-    
-    assert(plane_found);
-}

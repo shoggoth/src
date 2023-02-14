@@ -48,7 +48,7 @@
 		FF69FBA1299B953F00D18B2E /* body.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = body.c; sourceTree = "<group>"; };
 		FF69FBA2299B953F00D18B2E /* vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector.h; sourceTree = "<group>"; };
 		FF69FBA3299B953F00D18B2E /* plane.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = plane.c; sourceTree = "<group>"; };
-		FF69FBB3299B975300D18B2E /* simulation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = simulation; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF69FBB3299B975300D18B2E /* c_sim */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = c_sim; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF69FBB5299B975300D18B2E /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		FF69FBBC299B995900D18B2E /* vector.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vector.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,7 +75,7 @@
 		FF69FB88299B941100D18B2E = {
 			isa = PBXGroup;
 			children = (
-				FF69FBB4299B975300D18B2E /* simulation */,
+				FF69FBB4299B975300D18B2E /* c_sim */,
 				FF69FB98299B953F00D18B2E /* spring_mass */,
 				FF69FB92299B941100D18B2E /* Products */,
 				FF69FBBA299B981A00D18B2E /* Frameworks */,
@@ -86,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				FF69FB91299B941100D18B2E /* libspring_mass.a */,
-				FF69FBB3299B975300D18B2E /* simulation */,
+				FF69FBB3299B975300D18B2E /* c_sim */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,12 +110,12 @@
 			path = spring_mass;
 			sourceTree = "<group>";
 		};
-		FF69FBB4299B975300D18B2E /* simulation */ = {
+		FF69FBB4299B975300D18B2E /* c_sim */ = {
 			isa = PBXGroup;
 			children = (
 				FF69FBB5299B975300D18B2E /* main.c */,
 			);
-			path = simulation;
+			path = c_sim;
 			sourceTree = "<group>";
 		};
 		FF69FBBA299B981A00D18B2E /* Frameworks */ = {
@@ -161,9 +161,9 @@
 			productReference = FF69FB91299B941100D18B2E /* libspring_mass.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		FF69FBB2299B975300D18B2E /* simulation */ = {
+		FF69FBB2299B975300D18B2E /* c_sim */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FF69FBB7299B975300D18B2E /* Build configuration list for PBXNativeTarget "simulation" */;
+			buildConfigurationList = FF69FBB7299B975300D18B2E /* Build configuration list for PBXNativeTarget "c_sim" */;
 			buildPhases = (
 				FF69FBAF299B975300D18B2E /* Sources */,
 				FF69FBB0299B975300D18B2E /* Frameworks */,
@@ -173,9 +173,9 @@
 			);
 			dependencies = (
 			);
-			name = simulation;
+			name = c_sim;
 			productName = simulation;
-			productReference = FF69FBB3299B975300D18B2E /* simulation */;
+			productReference = FF69FBB3299B975300D18B2E /* c_sim */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -208,7 +208,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FF69FBB2299B975300D18B2E /* simulation */,
+				FF69FBB2299B975300D18B2E /* c_sim */,
 				FF69FB90299B941100D18B2E /* spring_mass */,
 			);
 		};
@@ -415,7 +415,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FF69FBB7299B975300D18B2E /* Build configuration list for PBXNativeTarget "simulation" */ = {
+		FF69FBB7299B975300D18B2E /* Build configuration list for PBXNativeTarget "c_sim" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FF69FBB8299B975300D18B2E /* Debug */,

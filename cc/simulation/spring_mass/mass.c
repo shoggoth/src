@@ -10,13 +10,13 @@
 #include <stdlib.h>
 #include <assert.h>
 
-sm_mass *dsmsMassNew(const float m, const float r) {
+sm_mass *new_mass(const float m, const float r) {
 
-    sm_mass *newMass = calloc(1, sizeof(sm_mass));
-    assert(newMass);
+    sm_mass *mass = calloc(1, sizeof(sm_mass));
+    assert(mass);
     
-    newMass->mass = m;
-    newMass->radius = r;
+    mass->mass = m;
+    mass->radius = r;
     
-    return newMass;
+    return mass;
 }

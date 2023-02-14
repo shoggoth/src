@@ -32,7 +32,6 @@ typedef struct {
     
 } sm_mass;
 
-
-sm_mass *dsmsMassNew(const float m, const float r);
+sm_mass *new_mass(const float m, const float r);
 
 #endif

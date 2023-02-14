@@ -34,18 +34,18 @@ typedef struct {
 } sm_space;
 
 
-sm_space *dsmsSpaceNew(const unsigned max_masses, const unsigned max_springs, const unsigned max_planes);
-void dsmsSpaceFree(sm_space * const space);
+sm_space *new_space(const unsigned max_masses, const unsigned max_springs, const unsigned max_planes);
+void free_space(sm_space * const space);
 
-void dsmsSpaceStep(sm_space * const space);
+void step_space(sm_space * const space);
 
-void dsmsSpaceAddMass(sm_space *space, sm_mass *mass);
-void dsmsSpaceRemMass(sm_space *space, sm_mass *mass);
+void add_mass_to_space(sm_space *space, sm_mass *mass);
+void remove_mass_from_space(sm_space *space, sm_mass *mass);
 
-void dsmsSpaceAddSpring(sm_space *space, sm_spring *spring);
-void dsmsSpaceRemSpring(sm_space *space, sm_spring *spring);
+void add_spring_to_space(sm_space *space, sm_spring *spring);
+void remove_spring_from_space(sm_space *space, sm_spring *spring);
 
-void dsmsSpaceAddPlane(sm_space *space, sm_plane *plane);
-void dsmsSpaceRemPlane(sm_space *space, sm_plane *plane);
+void add_plane_to_space(sm_space *space, sm_plane *plane);
+void remove_plane_from_space(sm_space *space, sm_plane *plane);
 
 #endif

@@ -18,4 +18,6 @@ typedef struct {
     
 } sm_plane;
 
+sm_plane *new_plane(const vec2 n, const float d);
+
 #endif

@@ -10,11 +10,11 @@
 
 int main(int argc, const char * argv[]) {
     
-    sm_space *space = dsmsSpaceNew(0, 0, 0);
+    sm_space *space = new_space(0, 0, 0);
     
     printf("Hello, World %p\n", space);
     
-    dsmsSpaceStep(space);
+    step_space(space);
     
     return 0;
 }
