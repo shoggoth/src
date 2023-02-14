@@ -7,74 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FFB585ED299A7A290089A817 /* vector.h in Headers */ = {isa = PBXBuildFile; fileRef = FFB585EC299A7A290089A817 /* vector.h */; };
-		FFB585F8299A7B680089A817 /* plane.c in Sources */ = {isa = PBXBuildFile; fileRef = FFB585EE299A7B680089A817 /* plane.c */; };
-		FFB585F9299A7B680089A817 /* body.c in Sources */ = {isa = PBXBuildFile; fileRef = FFB585EF299A7B680089A817 /* body.c */; };
-		FFB585FA299A7B680089A817 /* body.h in Headers */ = {isa = PBXBuildFile; fileRef = FFB585F0299A7B680089A817 /* body.h */; };
-		FFB585FB299A7B680089A817 /* mass.c in Sources */ = {isa = PBXBuildFile; fileRef = FFB585F1299A7B680089A817 /* mass.c */; };
-		FFB585FC299A7B680089A817 /* mass.h in Headers */ = {isa = PBXBuildFile; fileRef = FFB585F2299A7B680089A817 /* mass.h */; };
-		FFB585FD299A7B680089A817 /* plane.h in Headers */ = {isa = PBXBuildFile; fileRef = FFB585F3299A7B680089A817 /* plane.h */; };
-		FFB585FE299A7B680089A817 /* space.c in Sources */ = {isa = PBXBuildFile; fileRef = FFB585F4299A7B680089A817 /* space.c */; };
-		FFB585FF299A7B680089A817 /* space.h in Headers */ = {isa = PBXBuildFile; fileRef = FFB585F5299A7B680089A817 /* space.h */; };
-		FFB58600299A7B680089A817 /* spring.c in Sources */ = {isa = PBXBuildFile; fileRef = FFB585F6299A7B680089A817 /* spring.c */; };
-		FFB58601299A7B680089A817 /* spring.h in Headers */ = {isa = PBXBuildFile; fileRef = FFB585F7299A7B680089A817 /* spring.h */; };
-		FFB58605299A9B1D0089A817 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = FFB58604299A9B1D0089A817 /* main.c */; };
-		FFB58608299A9E720089A817 /* body.c in Sources */ = {isa = PBXBuildFile; fileRef = FFB585EF299A7B680089A817 /* body.c */; };
-		FFB58609299A9E720089A817 /* mass.c in Sources */ = {isa = PBXBuildFile; fileRef = FFB585F1299A7B680089A817 /* mass.c */; };
-		FFB5860A299A9E720089A817 /* plane.c in Sources */ = {isa = PBXBuildFile; fileRef = FFB585EE299A7B680089A817 /* plane.c */; };
-		FFB5860B299A9E720089A817 /* space.c in Sources */ = {isa = PBXBuildFile; fileRef = FFB585F4299A7B680089A817 /* space.c */; };
-		FFB5860C299A9E720089A817 /* spring.c in Sources */ = {isa = PBXBuildFile; fileRef = FFB585F6299A7B680089A817 /* spring.c */; };
+		FF69FBA4299B953F00D18B2E /* mass.h in Headers */ = {isa = PBXBuildFile; fileRef = FF69FB99299B953F00D18B2E /* mass.h */; };
+		FF69FBA5299B953F00D18B2E /* space.h in Headers */ = {isa = PBXBuildFile; fileRef = FF69FB9A299B953F00D18B2E /* space.h */; };
+		FF69FBA6299B953F00D18B2E /* body.h in Headers */ = {isa = PBXBuildFile; fileRef = FF69FB9B299B953F00D18B2E /* body.h */; };
+		FF69FBA7299B953F00D18B2E /* spring.c in Sources */ = {isa = PBXBuildFile; fileRef = FF69FB9C299B953F00D18B2E /* spring.c */; };
+		FF69FBA8299B953F00D18B2E /* plane.h in Headers */ = {isa = PBXBuildFile; fileRef = FF69FB9D299B953F00D18B2E /* plane.h */; };
+		FF69FBA9299B953F00D18B2E /* space.c in Sources */ = {isa = PBXBuildFile; fileRef = FF69FB9E299B953F00D18B2E /* space.c */; };
+		FF69FBAA299B953F00D18B2E /* mass.c in Sources */ = {isa = PBXBuildFile; fileRef = FF69FB9F299B953F00D18B2E /* mass.c */; };
+		FF69FBAB299B953F00D18B2E /* spring.h in Headers */ = {isa = PBXBuildFile; fileRef = FF69FBA0299B953F00D18B2E /* spring.h */; };
+		FF69FBAC299B953F00D18B2E /* body.c in Sources */ = {isa = PBXBuildFile; fileRef = FF69FBA1299B953F00D18B2E /* body.c */; };
+		FF69FBAD299B953F00D18B2E /* vector.h in Headers */ = {isa = PBXBuildFile; fileRef = FF69FBA2299B953F00D18B2E /* vector.h */; };
+		FF69FBAE299B953F00D18B2E /* plane.c in Sources */ = {isa = PBXBuildFile; fileRef = FF69FBA3299B953F00D18B2E /* plane.c */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		FFB58606299A9C410089A817 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FFB585D1299A79940089A817 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FFB585E6299A79C40089A817;
-			remoteInfo = spring_mass;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		FFB585D7299A79940089A817 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		FFB585D9299A79940089A817 /* simulation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = simulation; sourceTree = BUILT_PRODUCTS_DIR; };
-		FFB585DC299A79940089A817 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		FFB585E7299A79C40089A817 /* libspring_mass.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libspring_mass.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		FFB585EC299A7A290089A817 /* vector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vector.h; sourceTree = "<group>"; };
-		FFB585EE299A7B680089A817 /* plane.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = plane.c; sourceTree = "<group>"; };
-		FFB585EF299A7B680089A817 /* body.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = body.c; sourceTree = "<group>"; };
-		FFB585F0299A7B680089A817 /* body.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = body.h; sourceTree = "<group>"; };
-		FFB585F1299A7B680089A817 /* mass.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mass.c; sourceTree = "<group>"; };
-		FFB585F2299A7B680089A817 /* mass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mass.h; sourceTree = "<group>"; };
-		FFB585F3299A7B680089A817 /* plane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plane.h; sourceTree = "<group>"; };
-		FFB585F4299A7B680089A817 /* space.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = space.c; sourceTree = "<group>"; };
-		FFB585F5299A7B680089A817 /* space.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = space.h; sourceTree = "<group>"; };
-		FFB585F6299A7B680089A817 /* spring.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = spring.c; sourceTree = "<group>"; };
-		FFB585F7299A7B680089A817 /* spring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = spring.h; sourceTree = "<group>"; };
-		FFB58604299A9B1D0089A817 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		FF69FB91299B941100D18B2E /* libspring_mass.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libspring_mass.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF69FB99299B953F00D18B2E /* mass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mass.h; sourceTree = "<group>"; };
+		FF69FB9A299B953F00D18B2E /* space.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = space.h; sourceTree = "<group>"; };
+		FF69FB9B299B953F00D18B2E /* body.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = body.h; sourceTree = "<group>"; };
+		FF69FB9C299B953F00D18B2E /* spring.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = spring.c; sourceTree = "<group>"; };
+		FF69FB9D299B953F00D18B2E /* plane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plane.h; sourceTree = "<group>"; };
+		FF69FB9E299B953F00D18B2E /* space.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = space.c; sourceTree = "<group>"; };
+		FF69FB9F299B953F00D18B2E /* mass.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mass.c; sourceTree = "<group>"; };
+		FF69FBA0299B953F00D18B2E /* spring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = spring.h; sourceTree = "<group>"; };
+		FF69FBA1299B953F00D18B2E /* body.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = body.c; sourceTree = "<group>"; };
+		FF69FBA2299B953F00D18B2E /* vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector.h; sourceTree = "<group>"; };
+		FF69FBA3299B953F00D18B2E /* plane.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = plane.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FFB585D6299A79940089A817 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FFB585E5299A79C40089A817 /* Frameworks */ = {
+		FF69FB8F299B941100D18B2E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -84,103 +46,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FFB585D0299A79940089A817 = {
+		FF69FB88299B941100D18B2E = {
 			isa = PBXGroup;
 			children = (
-				FFB585DB299A79940089A817 /* simulation */,
-				FFB585EB299A79E70089A817 /* spring_mass */,
-				FFB585DA299A79940089A817 /* Products */,
-				FFB58602299A89770089A817 /* Frameworks */,
+				FF69FB98299B953F00D18B2E /* spring_mass */,
+				FF69FB92299B941100D18B2E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FFB585DA299A79940089A817 /* Products */ = {
+		FF69FB92299B941100D18B2E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FFB585D9299A79940089A817 /* simulation */,
-				FFB585E7299A79C40089A817 /* libspring_mass.a */,
+				FF69FB91299B941100D18B2E /* libspring_mass.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FFB585DB299A79940089A817 /* simulation */ = {
+		FF69FB98299B953F00D18B2E /* spring_mass */ = {
 			isa = PBXGroup;
 			children = (
-				FFB585DC299A79940089A817 /* main.cpp */,
-				FFB58604299A9B1D0089A817 /* main.c */,
-			);
-			path = simulation;
-			sourceTree = "<group>";
-		};
-		FFB585EB299A79E70089A817 /* spring_mass */ = {
-			isa = PBXGroup;
-			children = (
-				FFB585EC299A7A290089A817 /* vector.h */,
-				FFB585EF299A7B680089A817 /* body.c */,
-				FFB585F0299A7B680089A817 /* body.h */,
-				FFB585F1299A7B680089A817 /* mass.c */,
-				FFB585F2299A7B680089A817 /* mass.h */,
-				FFB585EE299A7B680089A817 /* plane.c */,
-				FFB585F3299A7B680089A817 /* plane.h */,
-				FFB585F4299A7B680089A817 /* space.c */,
-				FFB585F5299A7B680089A817 /* space.h */,
-				FFB585F6299A7B680089A817 /* spring.c */,
-				FFB585F7299A7B680089A817 /* spring.h */,
+				FF69FB9E299B953F00D18B2E /* space.c */,
+				FF69FB9A299B953F00D18B2E /* space.h */,
+				FF69FB9F299B953F00D18B2E /* mass.c */,
+				FF69FB99299B953F00D18B2E /* mass.h */,
+				FF69FB9C299B953F00D18B2E /* spring.c */,
+				FF69FBA0299B953F00D18B2E /* spring.h */,
+				FF69FBA3299B953F00D18B2E /* plane.c */,
+				FF69FB9D299B953F00D18B2E /* plane.h */,
+				FF69FBA1299B953F00D18B2E /* body.c */,
+				FF69FB9B299B953F00D18B2E /* body.h */,
+				FF69FBA2299B953F00D18B2E /* vector.h */,
 			);
 			path = spring_mass;
-			sourceTree = "<group>";
-		};
-		FFB58602299A89770089A817 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		FFB585E3299A79C40089A817 /* Headers */ = {
+		FF69FB8D299B941100D18B2E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFB585FA299A7B680089A817 /* body.h in Headers */,
-				FFB58601299A7B680089A817 /* spring.h in Headers */,
-				FFB585FD299A7B680089A817 /* plane.h in Headers */,
-				FFB585FF299A7B680089A817 /* space.h in Headers */,
-				FFB585ED299A7A290089A817 /* vector.h in Headers */,
-				FFB585FC299A7B680089A817 /* mass.h in Headers */,
+				FF69FBA4299B953F00D18B2E /* mass.h in Headers */,
+				FF69FBA8299B953F00D18B2E /* plane.h in Headers */,
+				FF69FBA6299B953F00D18B2E /* body.h in Headers */,
+				FF69FBAD299B953F00D18B2E /* vector.h in Headers */,
+				FF69FBA5299B953F00D18B2E /* space.h in Headers */,
+				FF69FBAB299B953F00D18B2E /* spring.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		FFB585D8299A79940089A817 /* simulation */ = {
+		FF69FB90299B941100D18B2E /* spring_mass */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FFB585E0299A79940089A817 /* Build configuration list for PBXNativeTarget "simulation" */;
+			buildConfigurationList = FF69FB95299B941100D18B2E /* Build configuration list for PBXNativeTarget "spring_mass" */;
 			buildPhases = (
-				FFB585D5299A79940089A817 /* Sources */,
-				FFB585D6299A79940089A817 /* Frameworks */,
-				FFB585D7299A79940089A817 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FFB58607299A9C410089A817 /* PBXTargetDependency */,
-			);
-			name = simulation;
-			productName = simulation;
-			productReference = FFB585D9299A79940089A817 /* simulation */;
-			productType = "com.apple.product-type.tool";
-		};
-		FFB585E6299A79C40089A817 /* spring_mass */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FFB585E8299A79C40089A817 /* Build configuration list for PBXNativeTarget "spring_mass" */;
-			buildPhases = (
-				FFB585E3299A79C40089A817 /* Headers */,
-				FFB585E4299A79C40089A817 /* Sources */,
-				FFB585E5299A79C40089A817 /* Frameworks */,
+				FF69FB8D299B941100D18B2E /* Headers */,
+				FF69FB8E299B941100D18B2E /* Sources */,
+				FF69FB8F299B941100D18B2E /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,27 +113,24 @@
 			);
 			name = spring_mass;
 			productName = spring_mass;
-			productReference = FFB585E7299A79C40089A817 /* libspring_mass.a */;
+			productReference = FF69FB91299B941100D18B2E /* libspring_mass.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FFB585D1299A79940089A817 /* Project object */ = {
+		FF69FB89299B941100D18B2E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
-					FFB585D8299A79940089A817 = {
-						CreatedOnToolsVersion = 14.2;
-					};
-					FFB585E6299A79C40089A817 = {
+					FF69FB90299B941100D18B2E = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
 			};
-			buildConfigurationList = FFB585D4299A79940089A817 /* Build configuration list for PBXProject "simulation" */;
+			buildConfigurationList = FF69FB8C299B941100D18B2E /* Build configuration list for PBXProject "simulation" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -216,63 +138,41 @@
 				en,
 				Base,
 			);
-			mainGroup = FFB585D0299A79940089A817;
-			productRefGroup = FFB585DA299A79940089A817 /* Products */;
+			mainGroup = FF69FB88299B941100D18B2E;
+			productRefGroup = FF69FB92299B941100D18B2E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FFB585D8299A79940089A817 /* simulation */,
-				FFB585E6299A79C40089A817 /* spring_mass */,
+				FF69FB90299B941100D18B2E /* spring_mass */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FFB585D5299A79940089A817 /* Sources */ = {
+		FF69FB8E299B941100D18B2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFB58608299A9E720089A817 /* body.c in Sources */,
-				FFB58609299A9E720089A817 /* mass.c in Sources */,
-				FFB5860A299A9E720089A817 /* plane.c in Sources */,
-				FFB5860B299A9E720089A817 /* space.c in Sources */,
-				FFB5860C299A9E720089A817 /* spring.c in Sources */,
-				FFB58605299A9B1D0089A817 /* main.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FFB585E4299A79C40089A817 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FFB585FE299A7B680089A817 /* space.c in Sources */,
-				FFB585F8299A7B680089A817 /* plane.c in Sources */,
-				FFB585FB299A7B680089A817 /* mass.c in Sources */,
-				FFB585F9299A7B680089A817 /* body.c in Sources */,
-				FFB58600299A7B680089A817 /* spring.c in Sources */,
+				FF69FBA9299B953F00D18B2E /* space.c in Sources */,
+				FF69FBAC299B953F00D18B2E /* body.c in Sources */,
+				FF69FBAA299B953F00D18B2E /* mass.c in Sources */,
+				FF69FBA7299B953F00D18B2E /* spring.c in Sources */,
+				FF69FBAE299B953F00D18B2E /* plane.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		FFB58607299A9C410089A817 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FFB585E6299A79C40089A817 /* spring_mass */;
-			targetProxy = FFB58606299A9C410089A817 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		FFB585DE299A79940089A817 /* Debug */ = {
+		FF69FB93299B941100D18B2E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
-				CLANG_ENABLE_MODULES = NO;
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -299,8 +199,8 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = NO;
-				GCC_C_LANGUAGE_STANDARD = c11;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -322,15 +222,15 @@
 			};
 			name = Debug;
 		};
-		FFB585DF299A79940089A817 /* Release */ = {
+		FF69FB94299B941100D18B2E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
-				CLANG_ENABLE_MODULES = NO;
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -358,7 +258,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -373,36 +273,22 @@
 			};
 			name = Release;
 		};
-		FFB585E1299A79940089A817 /* Debug */ = {
+		FF69FB96299B941100D18B2E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		FFB585E2299A79940089A817 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		FFB585E9299A79C40089A817 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5F9CYF5K3F;
 				EXECUTABLE_PREFIX = lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		FFB585EA299A79C40089A817 /* Release */ = {
+		FF69FB97299B941100D18B2E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5F9CYF5K3F;
 				EXECUTABLE_PREFIX = lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -412,34 +298,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FFB585D4299A79940089A817 /* Build configuration list for PBXProject "simulation" */ = {
+		FF69FB8C299B941100D18B2E /* Build configuration list for PBXProject "simulation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FFB585DE299A79940089A817 /* Debug */,
-				FFB585DF299A79940089A817 /* Release */,
+				FF69FB93299B941100D18B2E /* Debug */,
+				FF69FB94299B941100D18B2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FFB585E0299A79940089A817 /* Build configuration list for PBXNativeTarget "simulation" */ = {
+		FF69FB95299B941100D18B2E /* Build configuration list for PBXNativeTarget "spring_mass" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FFB585E1299A79940089A817 /* Debug */,
-				FFB585E2299A79940089A817 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FFB585E8299A79C40089A817 /* Build configuration list for PBXNativeTarget "spring_mass" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FFB585E9299A79C40089A817 /* Debug */,
-				FFB585EA299A79C40089A817 /* Release */,
+				FF69FB96299B941100D18B2E /* Debug */,
+				FF69FB97299B941100D18B2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FFB585D1299A79940089A817 /* Project object */;
+	rootObject = FF69FB89299B941100D18B2E /* Project object */;
 }
