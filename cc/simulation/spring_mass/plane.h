@@ -6,12 +6,10 @@
 //  Copyright 2011 Dogstar Diversions. http://www.dogstar.mobi
 //
 
-
 #ifndef SM_PLANE_H
 #define SM_PLANE_H
 
-#include "mass.h"
-
+#include "vector.h"
 
 typedef struct {
     

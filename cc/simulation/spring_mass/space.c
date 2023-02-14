@@ -6,12 +6,9 @@
 //  Copyright 2011 Dogstar Diversions. http://www.dogstar.mobi
 //
 
-
 #include "space.h"
 #include <stdlib.h>
 #include <assert.h>
-#include <stdio.h>
-
 
 static inline float vec2LengthSquared(const vec2 v) { return vec2DotProduct(v, v); }
 

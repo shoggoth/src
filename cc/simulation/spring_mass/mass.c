@@ -10,7 +10,6 @@
 #include <stdlib.h>
 #include <assert.h>
 
-
 sm_mass *dsmsMassNew(const float m, const float r) {
 
     sm_mass *newMass = calloc(1, sizeof(sm_mass));

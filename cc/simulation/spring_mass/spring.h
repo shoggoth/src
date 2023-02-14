@@ -6,7 +6,6 @@
 //  Copyright 2011 Dogstar Diversions. http://www.dogstar.mobi
 //
 
-
 #ifndef SM_SPRING_H
 #define SM_SPRING_H
 

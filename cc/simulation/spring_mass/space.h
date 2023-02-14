@@ -6,10 +6,10 @@
 //  Copyright 2011 Dogstar Diversions. http://www.dogstar.mobi
 //
 
-
 #ifndef SM_SPACE_H
 #define SM_SPACE_H
 
+#include "mass.h"
 #include "spring.h"
 #include "plane.h"
 

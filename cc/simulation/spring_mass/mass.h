@@ -6,7 +6,6 @@
 //  Copyright 2011 Dogstar Diversions. http://www.dogstar.mobi
 //
 
-
 #ifndef SM_MASS_H
 #define SM_MASS_H
 
