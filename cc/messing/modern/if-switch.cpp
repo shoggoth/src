@@ -25,8 +25,21 @@ void if_switch() {
         *itr = 4;
     }
 
-    // should output: 1, 4, 3, 4. can be simplified using `auto`
+    // Should output: 1, 4, 3, 4. can be simplified using `auto`
     for (std::vector<int>::iterator element = vec.begin(); element != vec.end();
         ++element)
         std::cout << *element << std::endl;
+    
+    // In the above code, we can see that the itr variable is defined in the scope of the entire if_switch(),
+    // which causes us to rename the other when a variable need to traverse the entire std::vector again.
+    // C++17 eliminates this limitation so that we can do this in if(or switch):
+    
+    if (const std::vector<int>::iterator itr = std::find(vec.begin(), vec.end(), 4); itr != vec.end()) {
+        *itr = 6;
+    }
+    
+    // Should output: 1, 6, 3, 4. Simplified using `auto`
+    for (auto element = vec.begin(); element != vec.end(); ++element)
+        std::cout << *element << std::endl;
+    
 }
