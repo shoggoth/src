@@ -16,6 +16,10 @@
 		FF3DAFFB29950359006AA21A /* messing.cc in Sources */ = {isa = PBXBuildFile; fileRef = FF3DAFFA29950359006AA21A /* messing.cc */; };
 		FF43E3E6299D212D00C301E9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF43E3E5299D212D00C301E9 /* main.cpp */; };
 		FF43E3EC299D218A00C301E9 /* foo.c in Sources */ = {isa = PBXBuildFile; fileRef = FF43E3EB299D218A00C301E9 /* foo.c */; };
+		FF43E3F4299D255900C301E9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF43E3F3299D255900C301E9 /* main.cpp */; };
+		FF43E3FA299D258400C301E9 /* nulls.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF43E3F8299D258400C301E9 /* nulls.cpp */; };
+		FF43E3FD299D28F600C301E9 /* constexprs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF43E3FB299D28F600C301E9 /* constexprs.cpp */; };
+		FF43E400299D2E6000C301E9 /* if-switch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF43E3FE299D2E6000C301E9 /* if-switch.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +50,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		FF43E3EF299D255800C301E9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +78,15 @@
 		FF43E3E5299D212D00C301E9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FF43E3EA299D218A00C301E9 /* foo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = foo.h; sourceTree = "<group>"; };
 		FF43E3EB299D218A00C301E9 /* foo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = foo.c; sourceTree = "<group>"; };
+		FF43E3F1299D255800C301E9 /* modern */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = modern; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF43E3F3299D255900C301E9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		FF43E3F8299D258400C301E9 /* nulls.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = nulls.cpp; sourceTree = "<group>"; };
+		FF43E3F9299D258400C301E9 /* nulls.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = nulls.hpp; sourceTree = "<group>"; };
+		FF43E3FB299D28F600C301E9 /* constexprs.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = constexprs.cpp; sourceTree = "<group>"; };
+		FF43E3FC299D28F600C301E9 /* constexprs.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = constexprs.hpp; sourceTree = "<group>"; };
+		FF43E3FE299D2E6000C301E9 /* if-switch.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "if-switch.cpp"; sourceTree = "<group>"; };
+		FF43E3FF299D2E6000C301E9 /* if-switch.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "if-switch.hpp"; sourceTree = "<group>"; };
+		FF43E401299D2F5700C301E9 /* Tutorial.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Tutorial.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +119,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FF43E3EE299D255800C301E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -123,6 +152,7 @@
 				FF3DB00629950925006AA21A /* functor */,
 				FF31F022299512B8006D602B /* static_lib */,
 				FF43E3E4299D212D00C301E9 /* link_c */,
+				FF43E3F2299D255900C301E9 /* modern */,
 				FF3DAFF829950359006AA21A /* Products */,
 				FF31F0272995152E006D602B /* Frameworks */,
 			);
@@ -135,6 +165,7 @@
 				FF3DB00529950925006AA21A /* functor */,
 				FF31F01E29951282006D602B /* libstatic_lib.a */,
 				FF43E3E3299D212D00C301E9 /* link_c */,
+				FF43E3F1299D255800C301E9 /* modern */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,6 +199,21 @@
 				FF43E3EA299D218A00C301E9 /* foo.h */,
 			);
 			path = link_c;
+			sourceTree = "<group>";
+		};
+		FF43E3F2299D255900C301E9 /* modern */ = {
+			isa = PBXGroup;
+			children = (
+				FF43E401299D2F5700C301E9 /* Tutorial.pdf */,
+				FF43E3F3299D255900C301E9 /* main.cpp */,
+				FF43E3F8299D258400C301E9 /* nulls.cpp */,
+				FF43E3F9299D258400C301E9 /* nulls.hpp */,
+				FF43E3FB299D28F600C301E9 /* constexprs.cpp */,
+				FF43E3FC299D28F600C301E9 /* constexprs.hpp */,
+				FF43E3FE299D2E6000C301E9 /* if-switch.cpp */,
+				FF43E3FF299D2E6000C301E9 /* if-switch.hpp */,
+			);
+			path = modern;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +298,23 @@
 			productReference = FF43E3E3299D212D00C301E9 /* link_c */;
 			productType = "com.apple.product-type.tool";
 		};
+		FF43E3F0299D255800C301E9 /* modern */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF43E3F5299D255900C301E9 /* Build configuration list for PBXNativeTarget "modern" */;
+			buildPhases = (
+				FF43E3ED299D255800C301E9 /* Sources */,
+				FF43E3EE299D255800C301E9 /* Frameworks */,
+				FF43E3EF299D255800C301E9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = modern;
+			productName = modern;
+			productReference = FF43E3F1299D255800C301E9 /* modern */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -273,6 +336,9 @@
 					FF43E3E2299D212D00C301E9 = {
 						CreatedOnToolsVersion = 14.2;
 					};
+					FF43E3F0299D255800C301E9 = {
+						CreatedOnToolsVersion = 14.2;
+					};
 				};
 			};
 			buildConfigurationList = FF3DAFF229950359006AA21A /* Build configuration list for PBXProject "messing" */;
@@ -291,6 +357,7 @@
 				FF3DAFF629950359006AA21A /* messing */,
 				FF3DB00429950925006AA21A /* functor */,
 				FF43E3E2299D212D00C301E9 /* link_c */,
+				FF43E3F0299D255800C301E9 /* modern */,
 				FF31F01D29951282006D602B /* static_lib */,
 			);
 		};
@@ -329,6 +396,17 @@
 			files = (
 				FF43E3EC299D218A00C301E9 /* foo.c in Sources */,
 				FF43E3E6299D212D00C301E9 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF43E3ED299D255800C301E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF43E400299D2E6000C301E9 /* if-switch.cpp in Sources */,
+				FF43E3FA299D258400C301E9 /* nulls.cpp in Sources */,
+				FF43E3FD299D28F600C301E9 /* constexprs.cpp in Sources */,
+				FF43E3F4299D255900C301E9 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +598,26 @@
 			};
 			name = Release;
 		};
+		FF43E3F6299D255900C301E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5F9CYF5K3F;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FF43E3F7299D255900C301E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5F9CYF5K3F;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -564,6 +662,15 @@
 			buildConfigurations = (
 				FF43E3E7299D212D00C301E9 /* Debug */,
 				FF43E3E8299D212D00C301E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF43E3F5299D255900C301E9 /* Build configuration list for PBXNativeTarget "modern" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF43E3F6299D255900C301E9 /* Debug */,
+				FF43E3F7299D255900C301E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
