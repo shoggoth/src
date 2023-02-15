@@ -8,7 +8,7 @@ class Greeter
 		puts "Hello, #{@name}!"
 	end
 	def say_bye
-		puts "\'bye, #{@name}!"
+		puts "\'Bye, #{@name}!"
 	end
 end
 
