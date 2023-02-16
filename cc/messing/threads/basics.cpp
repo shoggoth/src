@@ -10,5 +10,5 @@
 
 void basic_thread_test() {
     
-    std::cout << "Hello, World!\n";
+    std::cout << "Hello, Basic Thread World!\n";
 }

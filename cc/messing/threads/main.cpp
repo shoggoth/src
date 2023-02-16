@@ -6,13 +6,15 @@
 //
 
 #include "timing.hpp"
+#include "thread.hpp"
 
 // Multithreading support was introduced in C++11
 
 int main(int argc, const char * argv[]) {
     
-    timing_test();
-    timing_test_steady();
+    //timing_tests();
 
+    thread_tests();
+    
     return 0;
 }

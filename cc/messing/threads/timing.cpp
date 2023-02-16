@@ -10,7 +10,7 @@
 #include <thread>
 #include <chrono>
 
-void timing_test() {
+static void timing_test() {
     
     using namespace std::chrono;
     auto t = duration_cast<microseconds>(system_clock::now().time_since_epoch());
@@ -25,7 +25,7 @@ void timing_test() {
     std::cout << "Goodbye, cruel World! at " << v << " - " << v - u << "\n";
 }
 
-void timing_test_steady() {
+static void timing_test_steady() {
     
     using namespace std::chrono;
     auto t = duration_cast<nanoseconds>(steady_clock::now().time_since_epoch());
@@ -38,6 +38,12 @@ void timing_test_steady() {
     
     auto v = steady_clock::now().time_since_epoch().count();
     std::cout << "Goodbye, cruel (but steady) World! at " << v << " - " << v - u << "\n";
+}
+
+void timing_tests() {
+    
+    timing_test();
+    timing_test_steady();
 }
 
 // MARK: FPS

@@ -8,6 +8,4 @@
 #ifndef basics_hpp
 #define basics_hpp
 
-extern void basic_thread_test();
-
 #endif /* basics_hpp */

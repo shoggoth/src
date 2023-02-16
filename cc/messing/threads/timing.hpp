@@ -8,9 +8,7 @@
 #ifndef timing_hpp
 #define timing_hpp
 
-extern void timing_test();
-extern void timing_test_steady();
-
-extern void update();
+void timing_tests();
+void update();
 
 #endif /* timing_hpp */
