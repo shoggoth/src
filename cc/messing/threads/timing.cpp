@@ -7,6 +7,8 @@
 
 #include "timing.hpp"
 #include <iostream>
+#include <thread>
+#include <chrono>
 
 void timing_test() {
     

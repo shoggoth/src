@@ -8,9 +8,6 @@
 #ifndef timing_hpp
 #define timing_hpp
 
-#include <thread>
-#include <chrono>
-
 extern void timing_test();
 extern void timing_test_steady();
 
