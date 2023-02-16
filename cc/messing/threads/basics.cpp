@@ -15,10 +15,12 @@ using namespace std::chrono;
 using namespace std::chrono_literals;
 
 static void thread_with_lambda(int reps);
+static void thread_with_functor();
 
 void basic_thread_test() {
     
-    thread_with_lambda(30);
+    thread_with_functor();
+    thread_with_lambda(3);
 }
 
 static void thread_with_lambda(int reps) {
@@ -36,5 +38,27 @@ static void thread_with_lambda(int reps) {
     
     std::thread t1(lambda, "Background");
     lambda("Main");
+    t1.join();
+}
+
+static void thread_with_functor() {
+    
+    struct functor {
+        
+        functor(std::string name = "Anon") : name(name) {}
+        
+        void operator()(int count) {
+            
+            std::cout << name << " thread id : " << std::this_thread::get_id() << std::endl;
+
+            for (auto i = count; i--;) { std::cout << "Thread using function object as callable: " << i << " of " << count << std::endl; }
+        }
+        
+    private:
+        std::string     name;
+    };
+    
+    std::thread t1(functor("Threaded"), 5);
+    functor()(3);
     t1.join();
 }
