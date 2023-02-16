@@ -250,14 +250,30 @@
 			isa = PBXGroup;
 			children = (
 				FF84F588299E2DFE00C592B5 /* main.cpp */,
+				FF84F599299E45DD00C592B5 /* threads */,
+				FF84F597299E457D00C592B5 /* timing */,
+			);
+			path = threads;
+			sourceTree = "<group>";
+		};
+		FF84F597299E457D00C592B5 /* timing */ = {
+			isa = PBXGroup;
+			children = (
+				FF84F58D299E3AA500C592B5 /* timing.cpp */,
+				FF84F58E299E3AA500C592B5 /* timing.hpp */,
+			);
+			name = timing;
+			sourceTree = "<group>";
+		};
+		FF84F599299E45DD00C592B5 /* threads */ = {
+			isa = PBXGroup;
+			children = (
 				FF84F594299E413E00C592B5 /* thread.cpp */,
 				FF84F593299E40D600C592B5 /* thread.hpp */,
 				FF84F590299E3C4900C592B5 /* basics.cpp */,
 				FF84F591299E3C4900C592B5 /* basics.hpp */,
-				FF84F58D299E3AA500C592B5 /* timing.cpp */,
-				FF84F58E299E3AA500C592B5 /* timing.hpp */,
 			);
-			path = threads;
+			name = threads;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

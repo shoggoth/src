@@ -25,6 +25,8 @@ constexpr int fibonacci(const int n) {
 
 // C++11 provides constexpr to let the user explicitly declare that the function or object constructor will become a constant expression at compile time.
 
+static void forLoop20();
+
 int constexprs() {
     
     char arr_1[10];                      // legal
@@ -50,5 +52,22 @@ int constexprs() {
     
     char arr_8[len_8];
     
+    forLoop20();
+    
     return 0;
+}
+
+// MARK: For loop with likely
+
+constexpr auto addon3(int Value) noexcept {
+    
+    for (auto _ = 3; _--;) [[likely]] ++Value;
+    
+    return Value;
+}
+
+void forLoop20() {
+    
+    const int i = 23;
+    std::cout << "addon3(" << i << ") = " << addon3(i) << std::endl;
 }
