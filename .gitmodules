@@ -1,0 +1,3 @@
+[submodule "cc/state_mess/state_mess/afsm"]
+	path = cc/state_mess/state_mess/afsm
+	url = https://github.com/zmij/afsm.git
