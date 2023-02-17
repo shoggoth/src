@@ -6,6 +6,8 @@
 //
 
 #include <iostream>
+#include <afsm/fsm.hpp>
+#include "afsm/fsm.hpp"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
