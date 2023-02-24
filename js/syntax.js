@@ -18,3 +18,13 @@ var foo = 1;
 const add = (a, b) => { return a + b + 7 };
 
 console.log(`add: ${add(14, 88)} / 110`);
+
+const obj = {
+    firstName: 'John',
+    surName: 'Doe',
+    fullName() { return this.firstName + ' ' + this.surName; }
+};
+
+obj.surName = 'Smith';
+
+console.log(obj.fullName());
