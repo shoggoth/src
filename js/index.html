@@ -60,12 +60,12 @@
 
 		<script type="importmap">
 			{
-				"imports": {
-					"three": "../build/three.module.js",
-					"three/addons/": "./jsm/"
-				}
+			  "imports": {
+				"three": "https://unpkg.com/three@0.150.0/build/three.module.js",
+				"three/addons/": "https://unpkg.com/three@0.150.0/examples/jsm/"
+			  }
 			}
-		</script>
+		  </script>
 
 		<script type="module">
 
@@ -91,12 +91,12 @@
 
 			function init() {
 
-				container = document.getElementById( 'container' );
+				container = document.getElementById( 'container' ); console.log('Niggers');
 
 				camera = new THREE.PerspectiveCamera( 30, window.innerWidth / window.innerHeight, 1, 10000 );
 				camera.position.z = 100;
 
-				cameraRTT = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2, - 10000, 10000 );
+				cameraRTT = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2, - 1000, 1000 );
 				cameraRTT.position.z = 100;
 
 				//
@@ -136,7 +136,7 @@
 				const plane = new THREE.PlaneGeometry( window.innerWidth, window.innerHeight );
 
 				quad = new THREE.Mesh( plane, material );
-				quad.position.z = - 100;
+				quad.position.z = -100;
 				sceneRTT.add( quad );
 
 				const torusGeometry = new THREE.TorusGeometry( 100, 25, 15, 30 );
@@ -191,7 +191,6 @@
 				container.appendChild( stats.dom );
 
 				document.addEventListener( 'mousemove', onDocumentMouseMove );
-
 			}
 
 			function onDocumentMouseMove( event ) {
@@ -209,7 +208,6 @@
 
 				render();
 				stats.update();
-
 			}
 
 			function render() {
@@ -253,7 +251,6 @@
 				// (using first scene as regular texture)
 
 				renderer.render( scene, camera );
-
 			}
 
 		</script>
