@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="twgl-full.min.js"></script>
 </head>
 <body>
     <canvas id="c"></canvas>
     <div id="b"><a href="https://twgljs.org">twgl.js</a> - twgl--cube</div>
 </body>
 
-<script id="vs" type="notjs">
+<script id="vs" type="text/plain">
 uniform mat4 u_worldViewProjection;
 uniform vec3 u_lightWorldPos;
 uniform mat4 u_world;
@@ -38,7 +39,7 @@ void main() {
 }
 </script>
 
-<script id="fs" type="notjs">
+<script id="fs" type="text/plain">
 precision mediump float;
 
 varying vec4 v_position;
@@ -78,9 +79,9 @@ void main() {
 </script>
 
 <script type="module">
-    import * as twgl from './twgl-full.module.js';
+    //import * as twgl from './twgl-full.module.js';
     const m4 = twgl.m4;
-    const gl = document.querySelector("#c").getContext("webgl");
+    const gl = document.querySelector("#c").getContext("webgl2");
     const programInfo = twgl.createProgramInfo(gl, ["vs", "fs"]);
 
     const arrays = {
@@ -101,6 +102,10 @@ void main() {
             255, 255, 255, 255,
         ],
     });
+
+    const hccsTex = twgl.createTexture(gl, {
+        src: "HCCSLogo.png"
+    })
 
     const uniforms = {
         u_lightWorldPos: [1, 8, -10],
