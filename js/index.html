@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,36 +8,37 @@
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="fritx HCCS">
     <link rel="stylesheet" type="text/css" href="hccs.css">
-    <style>canvas { display: inline-block; width: 100vw; height: 100vh; background-color: grey; }</style>
+    <script src="twgl/twgl-full.min.js"></script>
+    <style>
+        canvas {
+            display: inline-block;
+            width: 100vw;
+            height: 100vh;
+            background-color: grey;
+        }
+    </style>
     <title>HCCS</title>
 </head>
+
 <body>
     <h1>Niggers</h1>
     <p id="demo">Are not Gonna Nig</p>
     <canvas id="canvas">Your browser does not seem to support HTML canvas.</canvas>
-    <script>document.getElementById("demo").innerHTML = "Are Gonna Nig!"</script>
-    <script>
-        function report_error(msg) { document.getElementById("demo").innerHTML = `Error: ${msg}!` }
+</body>
 
-        const gl = document.querySelector("#canvas").getContext("webgl2")
-        if (!gl) { alert("Browser doesn't support WebGL2, lad.") }
-        report_error("foo")
-    </script>
-
-    <script id="vertex_shader" type="x-shader/x-vertex">
+<script id="vs" type="x-shader/x-vertex">
 
         varying vec2 vUv;
 
         void main() {
 
             vUv = uv;
-            gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
-
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
         }
 
-    </script>
+</script>
 
-	<script id="fragment_shader" type="x-shader/x-fragment">
+<script id="fs" type="x-shader/x-fragment">
 
         varying vec2 vUv;
         uniform sampler2D tDiffuse;
@@ -45,7 +47,18 @@
 
             gl_FragColor = texture2D( tDiffuse, vUv );
         }
+</script>
 
-    </script>
-</body>
+<script>
+    function report_error(msg) { document.getElementById("demo").innerHTML = `Error: ${msg}!` }
+
+    const gl = document.querySelector("#canvas").getContext("webgl2")
+    if (!gl) { alert("Browser doesn't support WebGL2, lad.") }
+    const programInfo = twgl.createProgramInfo(gl, ["vs", "fs"])
+    //report_error("foo")
+    alert(programInfo)
+</script>
+
+<script>document.getElementById("demo").innerHTML = "Are Gonna Nig!"</script>
+
 </html>
